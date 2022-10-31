@@ -13,9 +13,10 @@
 		8BAE038B28FBD80100B69FBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE038928FBD80100B69FBB /* Main.storyboard */; };
 		8BAE038D28FBD80200B69FBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE038C28FBD80200B69FBB /* Assets.xcassets */; };
 		8BAE039028FBD80200B69FBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE038E28FBD80200B69FBB /* LaunchScreen.storyboard */; };
-		8BAE039B28FBD80200B69FBB /* kadai9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE039A28FBD80200B69FBB /* kadai9Tests.swift */; };
+		8BAE039B28FBD80200B69FBB /* Kadai9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE039A28FBD80200B69FBB /* Kadai9Tests.swift */; };
 		8BAE03A528FBD80200B69FBB /* kadai9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE03A428FBD80200B69FBB /* kadai9UITests.swift */; };
 		8BAE03A728FBD80200B69FBB /* kadai9UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE03A628FBD80200B69FBB /* kadai9UITestsLaunchTests.swift */; };
+		8BAE03B428FBF19700B69FBB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE03B328FBF19700B69FBB /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		8BAE038F28FBD80200B69FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAE039128FBD80200B69FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BAE039628FBD80200B69FBB /* kadai9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kadai9Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BAE039A28FBD80200B69FBB /* kadai9Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kadai9Tests.swift; sourceTree = "<group>"; };
+		8BAE039A28FBD80200B69FBB /* Kadai9Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kadai9Tests.swift; sourceTree = "<group>"; };
 		8BAE03A028FBD80200B69FBB /* kadai9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kadai9UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BAE03A428FBD80200B69FBB /* kadai9UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kadai9UITests.swift; sourceTree = "<group>"; };
 		8BAE03A628FBD80200B69FBB /* kadai9UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kadai9UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8BAE03B328FBF19700B69FBB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8BAE038328FBD80100B69FBB /* AppDelegate.swift */,
 				8BAE038528FBD80100B69FBB /* SceneDelegate.swift */,
 				8BAE038728FBD80100B69FBB /* ViewController.swift */,
+				8BAE03B328FBF19700B69FBB /* SecondViewController.swift */,
 				8BAE038928FBD80100B69FBB /* Main.storyboard */,
 				8BAE038C28FBD80200B69FBB /* Assets.xcassets */,
 				8BAE038E28FBD80200B69FBB /* LaunchScreen.storyboard */,
@@ -113,7 +116,7 @@
 		8BAE039928FBD80200B69FBB /* kadai9Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8BAE039A28FBD80200B69FBB /* kadai9Tests.swift */,
+				8BAE039A28FBD80200B69FBB /* Kadai9Tests.swift */,
 			);
 			path = kadai9Tests;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				8BAE037C28FBD80100B69FBB /* Sources */,
 				8BAE037D28FBD80100B69FBB /* Frameworks */,
 				8BAE037E28FBD80100B69FBB /* Resources */,
+				8BE6C3A0290185E700A2E07C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,11 +257,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8BE6C3A0290185E700A2E07C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BAE037C28FBD80100B69FBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAE03B428FBF19700B69FBB /* SecondViewController.swift in Sources */,
 				8BAE038828FBD80100B69FBB /* ViewController.swift in Sources */,
 				8BAE038428FBD80100B69FBB /* AppDelegate.swift in Sources */,
 				8BAE038628FBD80100B69FBB /* SceneDelegate.swift in Sources */,
@@ -268,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BAE039B28FBD80200B69FBB /* kadai9Tests.swift in Sources */,
+				8BAE039B28FBD80200B69FBB /* Kadai9Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,13 @@
 //
-//  kadai9UITestsLaunchTests.swift
-//  kadai9UITests
+//  Kadai9UITestsLaunchTests.swift
+//  Kadai9UITests
 //
 //  Created by 松村直樹 on 2022/10/16.
 //
 
 import XCTest
 
-final class kadai9UITestsLaunchTests: XCTestCase {
+final class Kadai9UITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
