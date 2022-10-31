@@ -9,11 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     var prefectureText = "未選択"
     @IBOutlet weak var prefectureLabel: UILabel!
 
