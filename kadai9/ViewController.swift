@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var prefectureText = "未選択"
-    @IBOutlet weak var prefectureLabel: UILabel!
+    private var prefectureText = "未選択"
+    @IBOutlet private weak var prefectureLabel: UILabel!
 
     @IBAction func exitAndSelect(segue: UIStoryboardSegue) {
         guard let secondVC = segue.source as? SecondViewController else {
             return
         }
-        self.prefectureLabel.text = secondVC.prefectures
+        prefectureLabel.text = secondVC.prefecture
     }
 
     @IBAction func exit(segue: UIStoryboardSegue) {
