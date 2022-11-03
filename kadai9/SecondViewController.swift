@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    var prefectures = ""
+    private(set) var prefecture = ""
 
     @IBAction func tokyo(_ sender: Any) {
         choosePrefectures(prefecture: "東京都", sender: sender)
@@ -27,7 +27,7 @@ class SecondViewController: UIViewController {
     }
 
     private func choosePrefectures(prefecture: String, sender: Any) {
-        prefectures = prefecture
+        self.prefecture = prefecture
         performSegue(withIdentifier: "exitAndSelect", sender: sender)
     }
 }
